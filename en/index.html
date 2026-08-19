@@ -22,10 +22,10 @@
     <meta property="og:description" content="Structured editorial catalog on technology, gaming, web development, and streaming. Upcoming launch.">
     <meta property="og:image" content="https://corgaxspace.com/imag/elementos/iconoreferencial.png">
     
-    <!-- Modern Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
+    <!-- Modern Favicon with edge masking -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%; -webkit-mask-image: -webkit-radial-gradient(white, black);">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%; clip-path: inset(0 round 20%);">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%; clip-path: inset(0 round 20%);">
     
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -78,15 +78,15 @@
         .cinta-obra {
             background: repeating-linear-gradient(
                 -45deg,
-                rgba(255, 255, 255, 0.15),
-                rgba(255, 255, 255, 0.15) 15px,
+                #ffffff,
+                #ffffff 15px,
                 transparent 15px,
                 transparent 30px
             );
             height: 14px;
             width: 100%;
             border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
         }
         .bg-pattern {
             position: fixed;
