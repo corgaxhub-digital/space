@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f05115">
-    <meta name="google" content="notranslate">
     
-    <title>Corgax Space | Technology, Gaming & Digital Culture</title>
-    <meta name="description" content="Discover Corgax Space, the new digital editorial ecosystem. In-depth analysis, guides, tech reviews, eSports, web development, and streaming.">
+    <title>Corgax Space | Technology and Gaming Editorial Ecosystem</title>
+    <meta name="description" content="Corgax Space is the definitive editorial ecosystem for Gaming, Technology, Web & Apps, and Streaming. Deep analysis, reviews, guides, and digital news.">
     <meta name="keywords" content="gaming, technology, web, apps, streaming, eSports, reviews, artificial intelligence, hosting, domains">
-    <meta name="author" content="Corgax & Corgiva">
+    <meta name="author" content="Corgax">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="#f05115">
     
-    <meta property="og:title" content="Corgax Space | Upcoming Launch">
-    <meta property="og:description" content="The definitive editorial ecosystem for technology, gaming culture, web development, and streaming.">
-    <meta property="og:image" content="https://corgaxspace.com/imag/elementos/iconoreferencial.png">
+    <link rel="alternate" hreflang="es" href="https://corgaxspace.com/">
+    <link rel="alternate" hreflang="en" href="https://corgaxspace.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://corgaxspace.com/">
+    
     <meta property="og:type" content="website">
-
-    <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+    <meta property="og:url" content="https://corgaxspace.com/en/">
+    <meta property="og:title" content="Corgax Space | Digital Culture Platform">
+    <meta property="og:description" content="Structured editorial catalog on technology, gaming, web development, and streaming. Upcoming launch.">
+    <meta property="og:image" content="https://corgaxspace.com/imag/elementos/iconoreferencial.png">
     
-    <link rel="icon" href="https://corgaxspace.com/imag/logo/favicon/space.png" type="image/png">
-    <link rel="apple-touch-icon" href="https://corgaxspace.com/imag/logo/favicon/space.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Modern Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://corgaxspace.com/imag/logo/favicon/space.png" style="border-radius: 20%;">
+    
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -70,34 +75,43 @@
             overflow-x: hidden;
             position: relative;
         }
-
         .cinta-obra {
-            background: repeating-linear-gradient(-45deg, #ffffff, #ffffff 15px, transparent 15px, transparent 30px);
+            background: repeating-linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.15),
+                rgba(255, 255, 255, 0.15) 15px,
+                transparent 15px,
+                transparent 30px
+            );
             height: 14px;
             width: 100%;
-            opacity: 0.9;
             border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.2);
         }
-
         .bg-pattern {
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.04;
+            opacity: 0.05;
             background-image: 
                 radial-gradient(circle at 15% 15%, #ffffff 1px, transparent 1px),
                 radial-gradient(circle at 85% 20%, #ffffff 1px, transparent 1px),
                 radial-gradient(circle at 50% 50%, #ffffff 1px, transparent 1px);
-            background-size: 60px 60px;
+            background-size: 100px 100px;
         }
-
-        .footer-logo {
+        .decorative-icon {
+            position: absolute;
+            color: white;
+            opacity: 0.04; 
+            pointer-events: none;
+            z-index: 0;
+        }
+        .footer-logo img {
             filter: grayscale(100%) brightness(200%) opacity(0.7);
             transition: all 0.4s ease-in-out;
         }
-        .footer-logo:hover {
+        .footer-logo:hover img {
             filter: grayscale(0%) brightness(100%) opacity(1);
             transform: scale(1.05);
         }
@@ -106,29 +120,29 @@
 
 <body class="text-white min-h-screen antialiased selection:bg-white selection:text-brand-orange relative">
 
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    
+    <div class="bg-pattern"></div>
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="bg-pattern"></div>
-        <i class="fa-solid fa-circle-nodes absolute text-white opacity-[0.05] text-6xl sm:text-8xl lg:text-[14rem] top-[5%] left-[2%] transform -rotate-12"></i>
-        <i class="fa-solid fa-rocket absolute text-white opacity-[0.05] text-7xl sm:text-9xl lg:text-[16rem] top-[8%] right-[-2%] transform rotate-45"></i>
-        <i class="fa-solid fa-globe absolute text-white opacity-[0.04] text-7xl sm:text-9xl lg:text-[18rem] top-[30%] left-[25%]"></i>
-        <i class="fa-solid fa-microchip absolute text-white opacity-[0.05] text-6xl sm:text-8xl lg:text-[10rem] bottom-[15%] right-[5%] transform rotate-12"></i>
-        <i class="fa-solid fa-gamepad absolute text-white opacity-[0.05] text-6xl sm:text-8xl lg:text-[12rem] bottom-[20%] left-[-2%] transform -rotate-12"></i>
-        <i class="fa-solid fa-headphones absolute text-white opacity-[0.05] text-5xl sm:text-7xl lg:text-[8rem] top-[40%] right-[12%] transform -rotate-12"></i>
+        <i class="fa-solid fa-circle-nodes decorative-icon text-5xl md:text-6xl lg:text-[8rem] top-[10%] left-[5%] transform -rotate-12"></i>
+        <i class="fa-solid fa-rocket decorative-icon text-6xl md:text-7xl lg:text-[10rem] top-[20%] right-[8%] transform rotate-45"></i>
+        <i class="fa-solid fa-globe decorative-icon text-7xl md:text-[8rem] lg:text-[12rem] top-[45%] left-[8%] opacity-[0.02] transform -rotate-2"></i>
+        <i class="fa-solid fa-microchip decorative-icon text-5xl md:text-6xl lg:text-[8rem] top-[50%] right-[6%] transform rotate-12"></i>
+        <i class="fa-solid fa-gamepad decorative-icon text-6xl md:text-7xl lg:text-[10rem] bottom-[10%] left-[5%] transform -rotate-12"></i>
+        <i class="fa-solid fa-headphones decorative-icon text-5xl md:text-6xl lg:text-[7rem] bottom-[15%] right-[10%] transform rotate-2"></i>
     </div>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-    <div class="max-w-[95%] mx-auto px-4 sm:px-5 py-6 sm:py-8 md:py-10 lg:py-12 relative z-10 flex flex-col justify-between min-h-screen">
+    <div class="max-w-[1450px] mx-auto px-4 sm:px-5 py-6 sm:py-8 md:py-10 lg:py-12 relative z-10 flex flex-col justify-between min-h-screen">
         
         <div class="w-full flex justify-end mb-4 sm:mb-6 md:mb-8">
-            <a href="/" class="bg-white/20 hover:bg-white/30 border border-white/30 text-white font-black px-4 py-1.5 md:px-5 md:py-2 rounded-xl backdrop-blur-sm transition-all duration-300 flex items-center shadow-md cursor-pointer text-sm sm:text-base md:text-lg tracking-wider">
+            <a href="/" class="bg-white/20 hover:bg-white/30 border border-white/30 text-white font-black px-4 py-1.5 md:px-5 md:py-2 rounded-xl backdrop-blur-sm transition-all duration-300 flex items-center shadow-md cursor-pointer text-sm sm:text-base tracking-wider no-underline">
                 ES
             </a>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-12 md:gap-8 lg:gap-16 mt-2 sm:mt-6 md:mt-10 lg:mt-16 mb-12 sm:mb-16 md:mb-20">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-12 md:gap-8 lg:gap-12 xl:gap-16 mt-2 sm:mt-6 md:mt-10 lg:mt-12 mb-12 sm:mb-16 md:mb-20">
             
-            <div class="w-full md:w-[55%] lg:w-1/2 text-center md:text-left">
+            <div class="w-full md:w-[55%] lg:w-1/2 text-center md:text-left md:pl-6 lg:pl-10 xl:pl-14">
                 
                 <div class="flex justify-center md:justify-start">
                     <img src="https://corgaxspace.com/imag/logo/spacesinfondo.png" alt="Logo Corgax Space" 
@@ -137,41 +151,41 @@
                          h-[250px] mt-[-80px] mb-[-40px]
                          xs:h-[230px] xs:mt-[-80px] xs:mb-[-32px]
                          sm:h-[290px] sm:mt-[-110px] sm:mb-[-42px]
-                         md:h-[290px] md:mt-[-210px] md:mb-[-40px]
-                         lg:h-[320px] lg:mt-[-230px] lg:mb-[-60px]">
+                         md:h-[250px] md:mt-[-180px] md:mb-[-30px]
+                         lg:h-[280px] lg:mt-[-200px] lg:mb-[-20px]">
                 </div>
 
-                <h1 class="text-4xl xs:text-3xl sm:text-5xl md:text-5xl lg:text-7xl font-black leading-[1.05] mb-6 sm:mb-8 lg:mb-10 drop-shadow-md tracking-tighter break-words">
+                <h1 class="text-4xl xs:text-3xl sm:text-5xl md:text-[2.6rem] lg:text-[3.4rem] xl:text-[3.8rem] font-black leading-[1.05] mb-6 sm:mb-8 lg:mb-8 drop-shadow-md tracking-tighter break-words uppercase">
                     UNDER<br>CONSTRUCTION
                 </h1>
 
-                <div class="cinta-obra mx-auto md:mx-0 max-w-[320px] xs:max-w-[260px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[550px]"></div>
+                <div class="cinta-obra mx-auto md:mx-0 max-w-[320px] xs:max-w-[260px] sm:max-w-[420px] md:max-w-[400px] lg:max-w-[480px]"></div>
 
-                <p class="text-sm xs:text-xs sm:text-base lg:text-xl leading-relaxed mt-6 mb-8 max-w-2xl mx-auto md:mx-0 opacity-95">
-                    We are preparing the new frontier of digital content. A specialized editorial ecosystem for <strong class="font-bold">technology, gaming culture, web development, and streaming.</strong> Very soon you will access advanced guides, detailed reviews, and the definitive analysis of the hyperconnected world.
+                <p class="text-sm xs:text-xs sm:text-base lg:text-lg leading-relaxed mt-6 mb-8 max-w-2xl mx-auto md:mx-0 opacity-95">
+                    We are preparing the definitive digital ecosystem for <strong class="font-bold text-white">technology, gaming, apps, web, and streaming.</strong> Very soon you will have access to a cutting-edge editorial catalog with guides, analysis, and the best digital news.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:justify-start items-center md:items-start text-left border-y border-white/30 sm:border-none py-5 sm:py-0 w-full lg:max-w-2xl">
+                <div class="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:justify-start items-center md:items-start text-left border-y border-white/20 sm:border-none py-5 sm:py-0 w-full">
                     <div class="flex items-center gap-4 w-full sm:w-1/2">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 flex items-center justify-center border-2 border-white rounded-xl shadow-sm">
-                            <i class="fa-solid fa-desktop text-xl sm:text-2xl"></i>
+                        <div class="w-12 h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 flex items-center justify-center border border-white/30 rounded-xl shadow-sm bg-white/10 backdrop-blur-sm">
+                            <i class="fa-solid fa-desktop text-xl lg:text-lg xl:text-xl"></i>
                         </div>
-                        <p class="text-xs sm:text-sm md:text-base leading-tight opacity-90 font-medium">
+                        <p class="text-xs sm:text-sm lg:text-[13px] xl:text-sm leading-tight opacity-90 font-medium">
                             Our editorial platform is currently in development.<br class="hidden xl:block">
                             Building the new experience.
                         </p>
                     </div>
                     
-                    <div class="hidden sm:block w-px h-14 sm:h-16 bg-white/30 mx-0 lg:mx-2"></div>
-                    <div class="block sm:hidden w-full h-px bg-white/20 my-1"></div>
+                    <div class="hidden sm:block w-px h-12 bg-white/20 mx-0 md:mx-2"></div>
+                    <div class="block sm:hidden w-full h-px bg-white/10 my-1"></div>
                     
                     <div class="flex items-center gap-4 w-full sm:w-1/2">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 flex items-center justify-center border-2 border-white rounded-xl shadow-sm">
-                            <i class="fa-regular fa-calendar-days text-xl sm:text-2xl"></i>
+                        <div class="w-12 h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 flex items-center justify-center border border-white/30 rounded-xl shadow-sm bg-white/10 backdrop-blur-sm">
+                            <i class="fa-regular fa-calendar-days text-xl lg:text-lg xl:text-xl"></i>
                         </div>
-                        <p class="text-xs sm:text-sm md:text-base leading-tight font-bold tracking-wide">
+                        <p class="text-xs sm:text-sm lg:text-[13px] xl:text-sm leading-tight font-bold tracking-wide">
                             UPCOMING LAUNCH.<br>
-                            <span class="bg-white text-brand-orange px-2 py-0.5 rounded-md font-black text-[10px] sm:text-xs inline-block mt-1">IN DEVELOPMENT</span>
+                            <span class="bg-white text-brand-orange px-2 py-0.5 rounded-md inline-block mt-1 font-black tracking-wider shadow-sm">IN DEVELOPMENT</span>
                         </p>
                     </div>
                 </div>
@@ -179,67 +193,64 @@
 
             <div class="w-full md:w-[45%] lg:w-1/2 flex flex-col justify-center items-center">
                 
-                <div class="w-full flex flex-col items-center justify-center mx-auto md:mx-0">
-                    <img src="https://corgaxspace.com/imag/elementos/iconoreferencial.png" alt="Corgax Space Concept" 
+                <div class="w-full flex flex-col items-center justify-center mx-auto">
+                    <img src="https://corgaxspace.com/imag/elementos/iconoreferencial.png" alt="Presentation Concept" 
                          draggable="false" oncontextmenu="return false;"
                          class="w-full h-auto object-contain relative z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-500 select-none pointer-events-none
                          max-w-[580px] mt-[32px] mb-[16px]
                          xs:max-w-[300px] xs:mt-[24px] xs:mb-[16px]
                          sm:max-w-[600px] sm:mt-[40px] sm:mb-[24px]
-                         md:max-w-[600px] md:mt-[-80px] md:mb-[32px]
-                         lg:max-w-[650px] lg:mt-[-80px] lg:mb-[40px]">
+                         md:max-w-[500px] md:mt-[-60px] md:mb-[20px]
+                         lg:max-w-[550px] lg:mt-[-60px] lg:mb-[30px]">
                 </div>
                 
-                <div class="flex flex-col items-center w-full mt-2 lg:mt-0">
+                <div class="flex flex-col items-center w-full max-w-full lg:max-w-[90%] xl:max-w-[85%]">
                     
                     <div class="w-full flex flex-col items-center">
-                        <span class="text-[10px] sm:text-xs lg:text-sm uppercase tracking-[0.25em] font-bold mb-2 lg:mb-3 opacity-90 text-center">Follow us</span>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2.5 lg:gap-3 bg-white/20 hover:bg-white/30 border border-white/30 px-4 py-2.5 lg:px-6 lg:py-3 rounded-xl backdrop-blur-sm transition-all duration-300 shadow-md cursor-pointer group w-full max-w-[320px] sm:max-w-[350px]">
-                            <i class="fa-brands fa-facebook text-xl sm:text-2xl text-white group-hover:scale-110 transition-transform"></i>
-                            <span class="text-xs sm:text-sm lg:text-base font-bold tracking-wide">Corgax Space</span>
+                        <span class="text-[10px] sm:text-xs lg:text-xs xl:text-sm uppercase tracking-[0.3em] font-bold mb-3 text-white/60">Follow Us</span>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                           class="flex justify-center items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 px-4 py-3.5 lg:py-3 xl:py-3.5 rounded-2xl backdrop-blur-sm transition-all duration-300 shadow-md cursor-pointer group w-full max-w-[320px] sm:max-w-[350px]">
+                            <i class="fa-brands fa-facebook text-xl sm:text-2xl lg:text-[24px] text-white group-hover:scale-110 transition-transform flex-shrink-0"></i>
+                            <span class="text-[11px] sm:text-sm lg:text-[13px] xl:text-sm font-bold tracking-wide whitespace-nowrap text-white text-center">Corgax Space</span>
                         </a>
                     </div>
 
-                    <div class="w-full relative group mt-6 lg:mt-8 flex flex-col items-center">
-                        <div class="relative w-full max-w-[500px] bg-white/15 hover:bg-white/25 transition-colors duration-500 backdrop-blur-md border border-white/30 rounded-2xl p-5 lg:p-6 flex flex-col items-center overflow-hidden shadow-2xl min-h-[140px] justify-center">
+                    <div class="w-full relative group mt-8 lg:mt-6 xl:mt-8 flex flex-col items-center">
+                        <div class="relative w-full bg-white/10 hover:bg-white/15 transition-all duration-500 backdrop-blur-md border border-white/20 rounded-2xl p-5 lg:p-5 xl:p-6 flex flex-col items-center overflow-hidden shadow-2xl min-h-[140px] lg:min-h-[120px] xl:min-h-[140px] justify-center">
                             
-                            <div class="absolute inset-0 pointer-events-none opacity-[0.05]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 12px 12px;"></div>
-                            
-                            <div class="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-white/50 pointer-events-none"></div>
-                            <div class="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-white/50 pointer-events-none"></div>
-
-                            <div id="widget-header" class="flex flex-row items-center justify-center gap-3 lg:gap-4 mb-4 relative z-10 w-full text-left transition-all duration-300">
-                                <div class="w-10 h-10 flex-shrink-0 bg-white/20 rounded-lg flex items-center justify-center border border-white/30 shadow-sm">
-                                    <i class="fa-solid fa-envelope text-white text-lg"></i>
+                            <div id="widget-header" class="flex flex-row items-center gap-3 sm:gap-4 mb-4 lg:mb-3 xl:mb-4 relative z-10 text-left w-full justify-start transition-all duration-300">
+                                <div class="w-10 h-10 lg:w-8 lg:h-8 xl:w-10 xl:h-10 flex-shrink-0 bg-white/15 rounded-lg flex items-center justify-center border border-white/20 shadow-sm">
+                                    <i class="fa-solid fa-envelope text-white text-lg lg:text-sm xl:text-lg"></i>
                                 </div>
                                 <div class="flex flex-col">
-                                    <span class="text-xs sm:text-sm lg:text-base font-black tracking-[0.15em] uppercase text-white drop-shadow-sm">Get Alerts</span>
-                                    <span class="text-[10px] sm:text-xs text-white/90 font-medium mt-0.5 uppercase tracking-wide">
-                                        We'll notify you when Space is ready.
+                                    <span class="text-xs sm:text-sm lg:text-[13px] xl:text-sm font-black tracking-[0.15em] uppercase text-white drop-shadow-sm">Launch Alert</span>
+                                    <span class="text-[10px] sm:text-xs lg:text-[10px] xl:text-xs text-white/80 font-medium mt-0.5 uppercase tracking-wide">
+                                        Join the priority list and get notified instantly.
                                     </span>
                                 </div>
                             </div>
                             
-                            <div id="success-message" class="hidden w-full text-center animate-fadeIn absolute inset-0 flex-col items-center justify-center z-20 bg-[#d9430c]/95 backdrop-blur-lg rounded-2xl border border-white/30 shadow-inner">
+                            <div id="success-message" class="hidden w-full text-center animate-fadeIn absolute inset-0 flex-col items-center justify-center z-20 bg-[#c44211]/90 backdrop-blur-md rounded-2xl border border-white/10">
                                 <div class="flex flex-col items-center justify-center gap-2">
                                     <i class="fa-solid fa-circle-check text-white text-[42px] drop-shadow-lg mb-1"></i>
                                     <span class="text-[14px] sm:text-[16px] text-white font-black tracking-widest uppercase drop-shadow-md text-center">
-                                        ACCESS SECURED!
+                                        Space Access Secured!
                                     </span>
-                                    <span class="text-[11px] sm:text-[12px] text-white/90 font-bold uppercase tracking-wide text-center">
-                                        We will notify you when we are ready.
+                                    <span class="text-[11px] sm:text-[12px] text-white/90 font-medium uppercase tracking-wide text-center">
+                                        We'll notify you on official launch day.
                                     </span>
                                 </div>
                             </div>
 
                             <div id="form-container" class="w-full transition-all duration-300">
                                 <form id="sib-form" method="POST" target="hidden_iframe" action="https://2506ec3f.sibforms.com/serve/MUIFAN34zS-vWXKtUKuK_qXWEm4fV3TNlwH_Nu2dTEsWsVE5NCjJYazYEg4tUe8moUNdfmMdGcNEL0dBAO4jjcACH6k93CvdzmsVpo-laAdqBgvinVat20uaEfv0BrTTre1hPICEnxF_d5WtiPkVRh7UN5nFtZIkNHX1QvTLrmtDIr01A9wlYkR6wXuURyevlAMkK7TeoEdASC-pCg==" data-type="subscription" class="w-full relative z-10" novalidate>
-                                    <div class="w-full flex flex-col items-center">
+                                    
+                                    <div class="w-full flex flex-col">
                                         <div class="relative flex w-full">
-                                            <input type="email" id="EMAIL" name="EMAIL" placeholder="YOUR EMAIL..." required autocomplete="off"
-                                                   class="bg-black/40 text-white text-[10px] sm:text-xs lg:text-sm pl-4 pr-[110px] sm:pr-[125px] py-3.5 w-full rounded-xl outline-none placeholder-white/60 font-bold border border-white/20 focus:border-white/50 focus:bg-black/50 shadow-inner transition-all uppercase backdrop-blur-sm">
+                                            <input type="email" id="EMAIL" name="EMAIL" placeholder="YOUR EMAIL ADDRESS..." required autocomplete="off"
+                                                   class="bg-black/30 text-white text-[10px] sm:text-xs lg:text-[11px] xl:text-xs pl-4 pr-[110px] sm:pr-[125px] py-3.5 lg:py-3 xl:py-3.5 w-full rounded-xl outline-none placeholder-white/50 font-bold border border-white/20 focus:border-white/50 focus:bg-black/40 shadow-inner transition-all uppercase backdrop-blur-sm">
                                             
-                                            <button id="submit-btn" type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 bg-[#d9430c] hover:bg-[#b83607] text-white px-3 sm:px-4 rounded-lg font-black text-[9px] sm:text-[10px] transition-all flex items-center justify-center uppercase tracking-wider shadow-lg border border-white/20 cursor-pointer">
+                                            <button id="submit-btn" type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 bg-[#d9430c] hover:bg-[#b83607] text-white px-3 sm:px-4 rounded-lg font-black text-[9px] sm:text-[10px] transition-all flex items-center justify-center uppercase tracking-wider shadow-lg border border-white/10 cursor-pointer">
                                                 <i id="btn-icon" class="fa-solid fa-bell mr-1.5 text-[10px]"></i> 
                                                 <span id="btn-text">Notify me</span>
                                                 <svg id="btn-loader" class="hidden w-3.5 h-3.5 ml-1.5 animate-spin text-white" viewBox="0 0 512 512" fill="currentColor">
@@ -247,148 +258,167 @@
                                                 </svg>
                                             </button>
                                         </div>
-                                        <p id="error-alert" class="hidden mt-2 text-[10px] sm:text-[11px] text-[#ffcccc] font-semibold text-center drop-shadow-md uppercase tracking-wider w-full">
+
+                                        <p id="error-alert" class="hidden mt-2 text-[10px] sm:text-[11px] text-[#ffcccc] font-semibold text-center drop-shadow-md uppercase tracking-wider">
                                             <i class="fa-solid fa-circle-exclamation mr-1"></i> Please enter a valid email.
                                         </p>
                                     </div>
+
                                     <input type="text" name="email_address_check" value="" class="hidden" tabindex="-1">
                                     <input type="hidden" name="locale" value="en">
                                 </form>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-center gap-4 mb-6 sm:mb-8 md:mb-10 w-full opacity-90 mt-4 sm:mt-6">
-            <div class="h-px bg-white/40 flex-1 rounded-full"></div>
-            <span class="tracking-[0.3em] font-bold text-xs sm:text-sm md:text-base uppercase whitespace-nowrap">Explore</span>
-            <div class="h-px bg-white/40 flex-1 rounded-full"></div>
+        <div class="flex items-center justify-center gap-4 mb-6 sm:mb-8 md:mb-10 w-full opacity-80 mt-4 sm:mt-6">
+            <div class="h-px bg-white/20 flex-1 rounded-full"></div>
+            <span class="tracking-[0.4em] font-bold text-xs sm:text-sm md:text-sm lg:text-[13px] xl:text-base uppercase whitespace-nowrap text-white/60">Categories</span>
+            <div class="h-px bg-white/20 flex-1 rounded-full"></div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-10 md:mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-4 xl:gap-6 mb-10 md:mb-16">
             
-            <div class="border border-white/30 rounded-xl p-4 sm:p-5 lg:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/25 transition-colors group cursor-default bg-white/15 backdrop-blur-sm shadow-sm">
-                <i class="fa-solid fa-gamepad text-3xl sm:text-4xl lg:text-5xl mb-3 transform transition-transform group-hover:scale-110"></i>
-                <h3 class="font-extrabold text-sm sm:text-base lg:text-lg mb-1 tracking-wide">GAMING</h3>
-                <p class="text-[10px] sm:text-xs lg:text-sm opacity-90 font-medium">Analysis, eSports, and trends.</p>
-            </div>
-            
-            <div class="border border-white/30 rounded-xl p-4 sm:p-5 lg:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/25 transition-colors group cursor-default bg-white/15 backdrop-blur-sm shadow-sm">
-                <i class="fa-solid fa-microchip text-3xl sm:text-4xl lg:text-5xl mb-3 transform transition-transform group-hover:scale-110"></i>
-                <h3 class="font-extrabold text-sm sm:text-base lg:text-lg mb-1 tracking-wide">TECH</h3>
-                <p class="text-[10px] sm:text-xs lg:text-sm opacity-90 font-medium">Reviews, devices, and tech news.</p>
-            </div>
-            
-            <div class="border border-white/30 rounded-xl p-4 sm:p-5 lg:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/25 transition-colors group cursor-default bg-white/15 backdrop-blur-sm shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 sm:w-11 sm:h-11 lg:w-14 lg:h-14 mb-2 lg:mb-3 transform transition-transform group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <defs>
-                        <mask id="device-mask">
-                            <rect width="24" height="24" fill="white" />
-                            <rect x="11.5" y="8.5" width="12" height="15" rx="2" fill="black" />
-                        </mask>
-                    </defs>
-                    <g mask="url(#device-mask)">
-                        <rect x="2" y="3" width="16" height="12" rx="2" />
-                        <path d="M6 19h8" />
-                        <path d="M10 15v4" />
-                    </g>
-                    <rect x="13" y="10" width="8" height="12" rx="1.5" />
-                    <path d="M17 19h.01" stroke-width="2" />
-                </svg>
-                <h3 class="font-extrabold text-sm sm:text-base lg:text-lg mb-1 tracking-wide whitespace-nowrap">WEB & APP</h3>
-                <p class="text-[10px] sm:text-xs lg:text-sm opacity-90 font-medium">Guides, dev, and updates.</p>
-            </div>
-            
-            <div class="border border-white/30 rounded-xl p-4 sm:p-5 lg:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/25 transition-colors group cursor-default bg-white/15 backdrop-blur-sm shadow-sm">
-                <i class="fa-solid fa-tv text-3xl sm:text-4xl lg:text-5xl mb-3 transform transition-transform group-hover:scale-110"></i>
-                <h3 class="font-extrabold text-sm sm:text-base lg:text-lg mb-1 tracking-wide">STREAMING</h3>
-                <p class="text-[10px] sm:text-xs lg:text-sm opacity-90 font-medium">Platform news and creators.</p>
-            </div>
-            
-            <div class="border border-white/30 rounded-xl p-4 sm:p-5 lg:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/25 transition-colors group cursor-default bg-white/15 backdrop-blur-sm shadow-sm col-span-2 md:col-span-1 lg:col-span-1">
-                <div class="relative mb-3 transform transition-transform group-hover:scale-110">
-                    <i class="fa-solid fa-dice text-3xl sm:text-4xl lg:text-5xl"></i>
-                    <span class="absolute -top-1 -right-4 bg-white text-brand-orange text-[8px] sm:text-[9px] font-black px-1 rounded-sm">18+</span>
+            <div class="border border-white/10 rounded-xl p-4 sm:p-5 lg:p-4 xl:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/10 hover:border-white/30 transition-all duration-300 group cursor-default bg-white/5 backdrop-blur-sm shadow-sm">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gamepad text-lg sm:text-xl lg:text-lg xl:text-xl text-white/90"></i>
                 </div>
-                <h3 class="font-extrabold text-sm sm:text-base lg:text-lg mb-1 tracking-wide">BET</h3>
-                <p class="text-[10px] sm:text-xs lg:text-sm opacity-90 font-medium">Forecasts, analysis & secure gaming.</p>
+                <h3 class="font-bold text-xs sm:text-sm lg:text-[13px] xl:text-base mb-1 tracking-wide uppercase">Gaming</h3>
+                <p class="text-[10px] sm:text-xs lg:text-[11px] xl:text-sm text-white/70 font-medium">Guides, eSports & trends.</p>
             </div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-5 sm:gap-6 pt-5 sm:pt-6 mb-6 text-left">
-            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
-                <i class="fa-solid fa-pen-nib text-lg sm:text-xl lg:text-2xl text-white/90 mt-0.5 sm:mt-0"></i>
-                <p class="text-[10px] sm:text-xs lg:text-sm font-medium leading-tight opacity-95">Cutting-edge editorial coverage.</p>
-            </div>
-            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
-                <i class="fa-solid fa-microscope text-lg sm:text-xl lg:text-2xl text-white/90 mt-0.5 sm:mt-0"></i>
-                <p class="text-[10px] sm:text-xs lg:text-sm font-medium leading-tight opacity-95">Rigorous and objective analysis.</p>
-            </div>
-            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
-                <i class="fa-solid fa-bolt text-lg sm:text-xl lg:text-2xl text-white/90 mt-0.5 sm:mt-0"></i>
-                <p class="text-[10px] sm:text-xs lg:text-sm font-medium leading-tight opacity-95">Optimized and modern performance.</p>
-            </div>
-            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
-                <i class="fa-solid fa-network-wired text-lg sm:text-xl lg:text-2xl text-white/90 mt-0.5 sm:mt-0"></i>
-                <p class="text-[10px] sm:text-xs lg:text-sm font-medium leading-tight opacity-95">The definitive hub for digital culture.</p>
-            </div>
-        </div>
-
-        <div class="w-full h-px bg-white/40 my-6 sm:my-8 md:my-10"></div>
-
-        <div class="w-full pt-2 pb-6 mt-auto flex flex-col items-center justify-center opacity-95">
-            <span class="text-[10px] sm:text-xs lg:text-sm uppercase tracking-[0.2em] font-semibold mb-3 lg:mb-4">A project by</span>
             
-            <div class="flex items-center gap-4 sm:gap-6 lg:gap-8">
-                
-                <div class="flex items-center justify-center relative overflow-hidden p-1 cursor-pointer">
+            <div class="border border-white/10 rounded-xl p-4 sm:p-5 lg:p-4 xl:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/10 hover:border-white/30 transition-all duration-300 group cursor-default bg-white/5 backdrop-blur-sm shadow-sm">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-microchip text-lg sm:text-xl lg:text-lg xl:text-xl text-white/90"></i>
+                </div>
+                <h3 class="font-bold text-xs sm:text-sm lg:text-[13px] xl:text-base mb-1 tracking-wide uppercase">Technology</h3>
+                <p class="text-[10px] sm:text-xs lg:text-[11px] xl:text-sm text-white/70 font-medium">Device & AI reviews.</p>
+            </div>
+            
+            <div class="border border-white/10 rounded-xl p-4 sm:p-5 lg:p-4 xl:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/10 hover:border-white/30 transition-all duration-300 group cursor-default bg-white/5 backdrop-blur-sm shadow-sm">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-white/90" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <mask id="monitor-mask-en">
+                                <rect width="24" height="24" fill="white" />
+                                <rect x="12" y="10" width="10" height="13" rx="2" fill="black" />
+                            </mask>
+                        </defs>
+                        <g mask="url(#monitor-mask-en)">
+                            <rect x="2" y="4" width="16" height="11" rx="2" />
+                            <path d="M6 19h8" />
+                            <path d="M10 15v4" />
+                        </g>
+                        <rect x="13" y="11" width="7" height="11" rx="1.5" />
+                        <path d="M16.5 19.5h.01" stroke-width="2" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-xs sm:text-sm lg:text-[13px] xl:text-base mb-1 tracking-wide uppercase">Web & App</h3>
+                <p class="text-[10px] sm:text-xs lg:text-[11px] xl:text-sm text-white/70 font-medium">Dev guides & updates.</p>
+            </div>
+            
+            <div class="border border-white/10 rounded-xl p-4 sm:p-5 lg:p-4 xl:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/10 hover:border-white/30 transition-all duration-300 group cursor-default bg-white/5 backdrop-blur-sm shadow-sm">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-tv text-lg sm:text-xl lg:text-lg xl:text-xl text-white/90"></i>
+                </div>
+                <h3 class="font-bold text-xs sm:text-sm lg:text-[13px] xl:text-base mb-1 tracking-wide uppercase">Streaming</h3>
+                <p class="text-[10px] sm:text-xs lg:text-[11px] xl:text-sm text-white/70 font-medium">Platforms & solutions.</p>
+            </div>
+            
+            <div class="border border-white/10 rounded-xl p-4 sm:p-5 lg:p-4 xl:p-6 flex flex-col items-center lg:items-start text-center lg:text-left hover:bg-white/10 hover:border-white/30 transition-all duration-300 group cursor-default bg-white/5 backdrop-blur-sm shadow-sm col-span-2 md:col-span-1 lg:col-span-1">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform relative">
+                    <i class="fa-solid fa-dice text-lg sm:text-xl lg:text-lg xl:text-xl text-white/90"></i>
+                    <span class="absolute -top-1 -right-2 bg-white text-brand-orange text-[8px] font-black px-1 rounded-sm">18+</span>
+                </div>
+                <h3 class="font-bold text-xs sm:text-sm lg:text-[13px] xl:text-base mb-1 tracking-wide uppercase">Bet</h3>
+                <p class="text-[10px] sm:text-xs lg:text-[11px] xl:text-sm text-white/70 font-medium">Analysis & safe gaming.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-5 sm:gap-6 pt-5 sm:pt-6 mb-6 text-left border-t border-white/10 opacity-95">
+            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
+                <i class="fa-solid fa-pen-nib text-lg sm:text-xl lg:text-lg xl:text-xl text-white/60 mt-0.5 sm:mt-0"></i>
+                <div>
+                    <h5 class="text-[10px] sm:text-[11px] lg:text-[10px] xl:text-xs font-bold tracking-wider uppercase mb-0.5 text-white/90">Editorial Coverage</h5>
+                    <p class="text-[9px] sm:text-[10px] lg:text-[9px] xl:text-[11px] font-medium leading-tight opacity-70">Cutting-edge articles.</p>
+                </div>
+            </div>
+            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
+                <i class="fa-solid fa-microscope text-lg sm:text-xl lg:text-lg xl:text-xl text-white/60 mt-0.5 sm:mt-0"></i>
+                <div>
+                    <h5 class="text-[10px] sm:text-[11px] lg:text-[10px] xl:text-xs font-bold tracking-wider uppercase mb-0.5 text-white/90">Rigorous Analysis</h5>
+                    <p class="text-[9px] sm:text-[10px] lg:text-[9px] xl:text-[11px] font-medium leading-tight opacity-70">Verified information.</p>
+                </div>
+            </div>
+            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
+                <i class="fa-solid fa-bolt text-lg sm:text-xl lg:text-lg xl:text-xl text-white/60 mt-0.5 sm:mt-0"></i>
+                <div>
+                    <h5 class="text-[10px] sm:text-[11px] lg:text-[10px] xl:text-xs font-bold tracking-wider uppercase mb-0.5 text-white/90">Optimized Design</h5>
+                    <p class="text-[9px] sm:text-[10px] lg:text-[9px] xl:text-[11px] font-medium leading-tight opacity-70">Blazing fast experience.</p>
+                </div>
+            </div>
+            <div class="flex items-start sm:items-center gap-2 sm:gap-3">
+                <i class="fa-solid fa-network-wired text-lg sm:text-xl lg:text-lg xl:text-xl text-white/60 mt-0.5 sm:mt-0"></i>
+                <div>
+                    <h5 class="text-[10px] sm:text-[11px] lg:text-[10px] xl:text-xs font-bold tracking-wider uppercase mb-0.5 text-white/90">Digital Culture</h5>
+                    <p class="text-[9px] sm:text-[10px] lg:text-[9px] xl:text-[11px] font-medium leading-tight opacity-70">The definitive ecosystem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full pt-10 mt-auto flex flex-col items-center justify-center opacity-95">
+            <span class="text-[10px] sm:text-xs lg:text-xs xl:text-sm uppercase tracking-[0.3em] font-semibold mb-4 sm:mb-6 text-white/50">A project by</span>
+            
+            <div class="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 xl:gap-10 flex-wrap">
+                <div class="footer-logo flex items-center justify-center relative overflow-hidden p-1 cursor-pointer">
                     <img src="https://corgax.com/imag/logo/corgaxsinfondo.png" alt="Corgax" 
                          draggable="false" oncontextmenu="return false;" 
-                         class="footer-logo max-h-full max-w-full relative z-10 object-contain select-none
+                         class="max-h-full max-w-full relative z-10 object-contain select-none
                          h-[120px] w-[100px] mt-[-25px] mb-[-25px]
                          sm:h-[130px] sm:w-[120px] sm:mt-[-30px] sm:mb-[-30px]
-                         md:h-[140px] md:w-[150px] md:mt-[-35px] md:mb-[-35px]
-                         lg:h-[150px] lg:w-[200px] lg:mt-[-40px] lg:mb-[-60px]">
+                         md:h-[120px] md:w-[130px] md:mt-[-30px] md:mb-[-30px]
+                         lg:h-[135px] lg:w-[160px] lg:mt-[-35px] lg:mb-[-45px]">
                 </div>
                 
-                <span class="text-base sm:text-lg lg:text-xl font-light text-white/80">&</span>
+                <span class="text-base sm:text-lg lg:text-lg xl:text-xl font-black text-white/30">&</span>
                 
-                <div class="flex items-center justify-center relative overflow-hidden p-1 cursor-pointer">
+                <div class="footer-logo flex items-center justify-center relative overflow-hidden p-1 cursor-pointer">
                     <img src="https://corgiva.com/imag/logo/corgivasinfondonegativo.png" alt="Corgiva" 
                          draggable="false" oncontextmenu="return false;" 
-                         class="footer-logo max-h-full max-w-full relative z-10 object-contain select-none
+                         class="max-h-full max-w-full relative z-10 object-contain select-none
                          h-[160px] w-[130px] mt-[-25px] mb-[-25px]
                          sm:h-[150px] sm:w-[150px] sm:mt-[-30px] sm:mb-[-30px]
-                         md:h-[170px] md:w-[170px] md:mt-[-35px] md:mb-[-35px]
-                         lg:h-[185px] lg:w-[220px] lg:mt-[-40px] lg:mb-[-60px]">
+                         md:h-[150px] md:w-[150px] md:mt-[-30px] md:mb-[-30px]
+                         lg:h-[165px] lg:w-[180px] lg:mt-[-35px] lg:mb-[-45px]">
                 </div>
-                
             </div>
         </div>
 
     </div>
 
     <script>
-        const form = document.getElementById('sib-form');
-        const emailInput = document.getElementById('EMAIL');
-        const errorAlert = document.getElementById('error-alert');
-        const successMessage = document.getElementById('success-message');
-        const formContainer = document.getElementById('form-container');
-        const widgetHeader = document.getElementById('widget-header');
-        const btnText = document.getElementById('btn-text');
-        const btnIcon = document.getElementById('btn-icon');
-        const btnLoader = document.getElementById('btn-loader');
-        const submitBtn = document.getElementById('submit-btn');
+        var form = document.getElementById('sib-form');
+        var emailInput = document.getElementById('EMAIL');
+        var errorAlert = document.getElementById('error-alert');
+        var successMessage = document.getElementById('success-message');
+        var formContainer = document.getElementById('form-container');
+        var widgetHeader = document.getElementById('widget-header');
+        var btnText = document.getElementById('btn-text');
+        var btnIcon = document.getElementById('btn-icon');
+        var btnLoader = document.getElementById('btn-loader');
+        var submitBtn = document.getElementById('submit-btn');
 
         function isValidEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+            var re = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
             return re.test(email);
         }
 
         form.addEventListener('submit', function(e) {
-            const emailValue = emailInput.value.trim();
+            var emailValue = emailInput.value.trim();
 
             if (!isValidEmail(emailValue)) {
                 e.preventDefault(); 
@@ -396,8 +426,8 @@
                 emailInput.classList.add('border-red-400');
                 
                 emailInput.style.transform = 'translateX(4px)';
-                setTimeout(() => emailInput.style.transform = 'translateX(-4px)', 100);
-                setTimeout(() => emailInput.style.transform = 'translateX(0)', 200);
+                setTimeout(function() { emailInput.style.transform = 'translateX(-4px)'; }, 100);
+                setTimeout(function() { emailInput.style.transform = 'translateX(0)'; }, 200);
                 return;
             }
 
@@ -408,16 +438,16 @@
             btnIcon.classList.add('hidden');
             btnLoader.classList.remove('hidden');
             
-            setTimeout(() => {
+            setTimeout(function() {
                 emailInput.disabled = true;
                 submitBtn.disabled = true;
             }, 50);
 
-            setTimeout(() => {
+            setTimeout(function() {
                 formContainer.style.opacity = '0';
                 widgetHeader.style.opacity = '0';
                 
-                setTimeout(() => {
+                setTimeout(function() {
                     formContainer.style.display = 'none';
                     widgetHeader.style.display = 'none';
                     successMessage.classList.remove('hidden');
@@ -430,6 +460,23 @@
             errorAlert.classList.add('hidden');
             emailInput.classList.remove('border-red-400');
         });
+
+        // Image Preloader script specific to Space content
+        window.addEventListener('load', function() {
+            var imagesToCache = [
+                'https://corgaxspace.com/imag/logo/spacesinfondo.png',
+                'https://corgaxspace.com/imag/elementos/iconoreferencial.png',
+                'https://corgax.com/imag/logo/corgaxsinfondo.png',
+                'https://corgiva.com/imag/logo/corgivasinfondonegativo.png',
+                'https://corgaxspace.com/imag/logo/favicon/space.png'
+            ];
+            
+            for (var i = 0; i < imagesToCache.length; i++) {
+                var img = new Image();
+                img.src = imagesToCache[i];
+            }
+        });
     </script>
+
 </body>
 </html>
